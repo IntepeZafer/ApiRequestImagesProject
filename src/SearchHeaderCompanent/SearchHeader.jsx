@@ -1,9 +1,12 @@
-import React from 'react'
-
+//import React from 'react'
+import './searchHeader.css'
 const SearchHeader = () => {
   return (
-    <div>
-      
+    <div className='formContainer'>
+      <form>
+        <label>Ne Arıyorsunuz?</label>
+        <input type="text" />
+      </form>
     </div>
   )
 }
