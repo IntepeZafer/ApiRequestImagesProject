@@ -1,13 +1,11 @@
-import React from 'react'
 import './SearchHeaderStyle.css'
+import PropTypes from 'prop-types';
 
 const SearchHeader = ({search}) => {
-    
     const handleFormSubmit = (event) => {
+        search("Zafer İntepe");
         event.preventDefault();
-        search("Zafer İntepe")
     }
-
   return (
     <div className="formContainer">
         <form onSubmit={handleFormSubmit}>
@@ -17,5 +15,10 @@ const SearchHeader = ({search}) => {
     </div>
   )
 }
+
+
+SearchHeader.propTypes = {
+  search: PropTypes.func.isRequired  // FIXME: search fonksiyonu zorunlu ve bir fonksiyon olmalı
+};
 
 export default SearchHeader
