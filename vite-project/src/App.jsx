@@ -1,12 +1,17 @@
-import { useState } from 'react'
+import SearchHeader from '../public/SearchHeader/SearchHeader';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const handleSubmit = (event) => {
+    console.log(event);
+  }
 
   return (
     <>
-      <div className='App'></div>
+      <div className='App'>
+        <SearchHeader search={handleSubmit}/>
+      </div>
     </>
   )
 }

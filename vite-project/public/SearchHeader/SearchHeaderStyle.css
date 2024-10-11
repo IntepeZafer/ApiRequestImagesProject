@@ -1,0 +1,21 @@
+.formContainer{
+    background-color: rgb(255, 94, 0);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.formContainer form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.formContainer form label{
+    color: white;
+    letter-spacing: .125rem;
+}
+.formContainer form input{
+    border-radius: .5rem;
+    border: 1px solid black;
+    outline: none;
+    padding: .5rem;
+}
