@@ -1,15 +1,20 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 import './SearchHeader.css'
 function SearchHeader({search}) {
+    const [valueInput, setValue] = useState('')
     const handleFormSubmit = (event) => {
-        search("Hello World");
+        search(valueInput);
         event.preventDefault();
+    }
+    const handleChange = (event) => {
+        setValue(event.target.value);
     }
     return ( 
         <div className='formContainer'>
             <form onSubmit={handleFormSubmit}>
                 <label>Neyi Arıyorsunuz ?</label>
-                <input type="text" />
+                <input type="text" value={valueInput} onChange={handleChange}/>
             </form>
         </div>
      );
