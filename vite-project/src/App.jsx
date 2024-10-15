@@ -1,10 +1,15 @@
 import './App.css'
+import searchImages from '../Public/ApiServices/apiServices'
 import SearchHeader from '../Public/SearchHeader/SearchHeader'
 function App() {
+  const handleSubmit = (event) => {
+    searchImages(event);
+    console.log(event);
+  }
   return (
     <>
       <div className='App'>
-        <SearchHeader />
+        <SearchHeader search={handleSubmit}/>
       </div>
     </>
   )
